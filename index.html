@@ -7,30 +7,38 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <h1>AI Qoute Generator</h1>
-    </header>
-    <main>
-      <input
-        type="text"
-        placeholder="Enter a word"
-        autofocus
-        required
-        autocomplete="off"
-      />
-      <input type="submit" />
-    </main>
-    <footer>
-      This AI project was coded by
-      <a href="https://github.com/mishaa77" target="_blank">Amina J</a> and is
-      <a href="https://github.com/mishaa77/AI-Quote-Generator" target="_blank"
-        >open-sourced on GitHub</a
-      >
-      and is
-      <a href="https://aminaj-quote-generator.netlify.app/" target="_blank"
-        >hosted on Netifly</a
-      >
-    </footer>
+    <div class="container">
+      <header>
+        <h1>AI Qoute Generator</h1>
+      </header>
+      <main>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter a word"
+            autofocus
+            required
+            autocomplete="off"
+            class="enter-word"
+          />
+          <input type="submit" class="submit-button" />
+        </form>
+        <div class="quote">
+          “You have to believe in yourself when no one else does.”
+        </div>
+      </main>
+      <footer>
+        This AI project was coded by
+        <a href="https://github.com/mishaa77" target="_blank">Amina J</a> and is
+        <a href="https://github.com/mishaa77/AI-Quote-Generator" target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and is
+        <a href="https://aminaj-quote-generator.netlify.app/" target="_blank"
+          >hosted on Netifly</a
+        >
+      </footer>
+    </div>
 
     <script src="src/index.js"></script>
   </body>
