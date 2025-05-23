@@ -19,7 +19,7 @@ h1 {
   line-height: 1.5;
 }
 form {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-left: 10px;
 }
 .enter-word {
@@ -40,6 +40,11 @@ form {
 .submit-button:hover {
   background-color: #e7cccc;
   color: #3a0519;
+}
+.hint {
+  margin-left: 10px;
+  font-size: 13px;
+  opacity: 0.6;
 }
 .quote {
   margin-left: 10px;
