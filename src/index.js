@@ -5,20 +5,22 @@ function displayQoute(response) {
     cursor: "",
     delay: 1,
   });
+  console.log(response.data);
 }
 
 function generateQuote(event) {
   event.preventDefault();
 
-  let userInput = document.getElementById("enter-input");
-  let apiKey = "900fe54a2dcb23943o88ct0a1d192e13";
-  let prompt = `Generate a qoute about ${userInput} use basic html`;
-  let context = `you are an AI assistant who creates quotes.`;
+  let userInstruction = document.querySelector("#user-input");
+  let apiKey = "f3a1ab1884f405093fec0555dtb0oa41";
+  let prompt = `user input:Generate a qoute about ${userInstruction.value}`;
+  let context =
+    "you are an AI assistant who creates quotes.Generate a a quote and Make sure to follow the user input ";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   axios.get(apiUrl).then(displayQoute);
   console.log(apiUrl);
-  console.log(userInput);
+  console.log(userInstruction.value);
 }
 
 let submitForm = document.getElementById("form");
