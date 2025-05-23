@@ -10,14 +10,15 @@ function displayQoute(response) {
 function generateQuote(event) {
   event.preventDefault();
 
-  let userElement = document.getElementById("enter-input");
+  let userInput = document.getElementById("enter-input");
   let apiKey = "900fe54a2dcb23943o88ct0a1d192e13";
-  let prompt = `Generate a qoute about${userElement}`;
-  let context = `you are an AI assistant who creates quotes .Generate quotes based on the ${userElement}.the quote should be relatable and should mention the${userInput}`;
+  let prompt = `Generate a qoute about ${userInput} use basic html`;
+  let context = `you are an AI assistant who creates quotes.`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   axios.get(apiUrl).then(displayQoute);
-  console.log(userElement);
+  console.log(apiUrl);
+  console.log(userInput);
 }
 
 let submitForm = document.getElementById("form");
